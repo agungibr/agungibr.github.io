@@ -1,0 +1,81 @@
+<!DOCTYPE html><html lang="en"><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Sejarah London: Dari Pendirian Romawi Hingga Metropolis Global Modern</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="../../index.css"></head>
+  <body>
+    <div id="loading">
+      <div id="spinner"></div>
+    </div>
+    <a href="/" class="go_back"><i class="fas fa-arrow-left"></i></a>
+    <div id="background_overlay"></div>
+    <div id="background" style="background: url(top_image.avif) center;"></div>
+    <table id="profile_blog">
+      <tbody>
+        <tr>
+          <td style="width:8vw;"><div id="profile_img_blog"></div></td>
+          <td style="width:52vw;">
+            <div id="username_blog"></div>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    <div id="blog-display">
+      <h1 id="blog_title">Sejarah London: Dari Pendirian Romawi Hingga Metropolis Global Modern</h1>
+      <h2 id="blog_sub_title">#history</h2>
+      <div id="blog"><p id="para_0_original"><br>London, ibu kota Inggris, adalah salah satu kota paling bersejarah dan beragam di dunia. Dengan sejarahnya yang kaya dan kompleks, London telah menjadi pusat politik, budaya, dan ekonomi selama berabad-abad. Sebagai salah satu kota tertua di Eropa, jejak sejarah London dapat ditelusuri kembali lebih dari dua ribu tahun yang lalu ketika didirikan oleh bangsa Romawi pada abad pertama Masehi. Mereka memberi nama kota ini "Londinium" dan membangun infrastruktur pertama kota, termasuk jembatan pertama yang melintasi Sungai Thames.</br>
+
+<br>Setelah kejatuhan Kekaisaran Romawi, London mengalami periode kegelapan pada Abad Pertengahan, tetapi kemudian bangkit kembali sebagai pusat perdagangan yang penting di Inggris pada Abad Pertengahan. Pada abad ke-11, William Sang Penakluk dari Normandia membangun Menara London, sebuah struktur ikonik yang masih berdiri kokoh hingga kini. Selama Abad Pertengahan, London berkembang menjadi kota yang ramai dan berkembang pesat, meskipun sering kali terkena bencana seperti wabah penyakit dan kebakaran.</br>
+
+<br>Pada abad ke-17 dan ke-18, London mengalami pertumbuhan dan perkembangan pesat sebagai pusat kebudayaan dan intelektual Eropa selama masa Renaisans dan Revolusi Industri. Dengan bangunannya yang megah seperti Istana Buckingham dan Katedral St. Paul, serta perkembangan dalam seni, sastra, dan ilmu pengetahuan, London menjadi salah satu kota terkemuka di dunia. Pada masa ini, London juga menjadi pusat perdagangan global dengan didirikannya Perusahaan Hindia Timur.</br>
+
+<br>Pada abad ke-19 dan awal abad ke-20, London terus tumbuh sebagai metropolis global dengan pembangunan infrastruktur transportasi seperti Kereta Api Bawah Tanah (Tube) dan jaringan rel kereta api nasional yang menghubungkan kota ini dengan kota-kota besar lainnya di Inggris. Meskipun mengalami kerusakan parah selama Perang Dunia II, London berhasil bangkit kembali dan menjalani periode pembangunan dan modernisasi yang pesat pada paruh kedua abad ke-20.</br>
+
+<br>Hari ini, London adalah salah satu kota terbesar dan paling beragam di dunia, dengan populasi yang mencakup berbagai budaya, etnis, dan latar belakang. Dengan kombinasi antara warisan sejarahnya yang kaya, kekayaan budayanya yang beragam, dan posisinya sebagai pusat keuangan, budaya, dan politik global, London tetap menjadi salah satu kota paling menarik dan dinamis di dunia.</br>
+
+<br>Secara keseluruhan, sejarah London mencerminkan perjalanan panjang dan kompleks dari sebuah pemukiman kecil Romawi menjadi salah satu metropolis paling penting di dunia. Dengan warisan sejarahnya yang kaya, infrastruktur modernnya yang canggih, dan kehidupan kota yang dinamis, London terus menarik dan menginspirasi orang dari seluruh dunia.</br></p></div>
+    </div>
+    <div id="footer_blog">
+      <a href="https://github.com/imfunniee" target="_blank">Copyright Gitfolio</a>
+    </div>
+    <script type="text/javascript">
+      setTimeout(function() {
+        document.getElementById("loading").classList.add("animated");
+        document.getElementById("loading").classList.add("fadeOut");
+        setTimeout(function() {
+          document.getElementById("loading").classList.remove("animated");
+          document.getElementById("loading").classList.remove("fadeOut");
+          document.getElementById("loading").style.display = "none";
+        }, 800);
+      }, 1500);
+      $.getJSON("../../config.json", function(user) {
+        var icon = document.createElement("link");
+        icon.setAttribute("rel", "icon");
+        icon.setAttribute("href", user[0].userimg);
+        icon.setAttribute("type", "image/png");
+        document.getElementsByTagName("head")[0].appendChild(icon);
+        document.getElementById(
+          "profile_img_blog"
+        ).style.background = `url('${user[0].userimg}') center center`;
+        document.getElementById(
+          "username_blog"
+        ).innerHTML = `<span style="display:${
+          user[0].name == null || !user[0].name ? "none" : "block"
+        };">${user[0].name}</span>@${user[0].username}<b id="blog_time"></b>`;
+
+        if ((user[0].theme = "dark.css")) {
+          document.querySelector("#background_overlay").style.background =
+            "linear-gradient(0deg, rgba(10, 10, 10, 1), rgba(10, 10, 10, 0.1))";
+        } else {
+          document.querySelector("#background_overlay").style.background =
+            "linear-gradient(0deg, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0.1))";
+        }
+      });
+    </script>
+  
+
+</body></html>

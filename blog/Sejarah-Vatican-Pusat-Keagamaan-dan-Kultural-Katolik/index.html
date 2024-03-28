@@ -1,0 +1,83 @@
+<!DOCTYPE html><html lang="en"><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Sejarah Vatican: Pusat Keagamaan dan Kultural Katolik</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="../../index.css"></head>
+  <body>
+    <div id="loading">
+      <div id="spinner"></div>
+    </div>
+    <a href="/" class="go_back"><i class="fas fa-arrow-left"></i></a>
+    <div id="background_overlay"></div>
+    <div id="background" style="background: url(top_image.avif) center;"></div>
+    <table id="profile_blog">
+      <tbody>
+        <tr>
+          <td style="width:8vw;"><div id="profile_img_blog"></div></td>
+          <td style="width:52vw;">
+            <div id="username_blog"></div>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    <div id="blog-display">
+      <h1 id="blog_title">Sejarah Vatican: Pusat Keagamaan dan Kultural Katolik</h1>
+      <h2 id="blog_sub_title">#history</h2>
+      <div id="blog"><p id="para_0_original"><br>Vatican City, yang dikenal sebagai negara terkecil di dunia, adalah pusat spiritual dan administratif Gereja Katolik Roma dan rumah bagi Paus, kepala Gereja Katolik. Meskipun ukurannya yang kecil, Vatican memiliki sejarah yang kaya dan kompleks yang mencerminkan peranannya sebagai salah satu pusat keagamaan dan kultural paling penting di dunia.</br>
+
+<br>Asal usul Vatican dapat ditelusuri kembali ke zaman Romawi Kuno. Area di mana Vatican City sekarang berdiri pernah menjadi bagian dari wilayah Romawi, dan pada awalnya merupakan sebuah pemukiman kecil yang dikenal sebagai Collis Vaticanus. Namun, peranannya sebagai pusat keagamaan dimulai pada abad ke-4 Masehi, ketika Kaisar Konstantinus Agung memberikan kebebasan beragama kepada umat Kristen dan membangun Basilika Santo Petrus di situs yang sekarang menjadi pusat kota Vatican. Basilika ini menjadi salah satu gereja terbesar di dunia dan menjadi pusat kegiatan keagamaan dan ritual.</br>
+
+<br>Selama Abad Pertengahan, wilayah Vatican dikuasai oleh berbagai pihak, termasuk Lombard, Frank, dan Kekaisaran Bizantium, sebelum akhirnya menjadi bagian dari Kekaisaran Romawi Suci. Pada abad ke-8, sebuah perjanjian antara Paus Stefanus II dan Raja Pepin dari Frankia memastikan otonomi kepausan dan memberikan dasar hukum untuk terbentuknya negara-negara kota di Italia tengah, termasuk Roma dan Vatican.</br>
+
+<br>Pada abad ke-16, Vatican mengalami transformasi besar dengan dimulainya Renaisans Katolik. Paus seperti Leo X dan Julius II memulai era pembangunan dan renovasi di Vatican, yang menghasilkan beberapa karya seni dan arsitektur paling indah di dunia, termasuk Kappella Sistina yang terkenal dengan freskonya yang dikerjakan oleh Michelangelo.</br>
+
+<br>Meskipun mengalami masa-masa sulit selama Revolusi Prancis dan penyatuan Italia pada abad ke-19, kedaulatan Vatican diakui secara resmi pada tahun 1929 dengan ditandatanganinya Perjanjian Lateran antara Italia dan Takhta Suci. Perjanjian ini menjamin otonomi kepausan dan memastikan pendirian negara kota Vatican yang independen.</br>
+
+<br>Hari ini, Vatican City tetap menjadi pusat keagamaan dan spiritual bagi lebih dari satu miliar umat Katolik di seluruh dunia. Selain itu, sebagai pusat seni, budaya, dan sejarah, Vatican juga menarik jutaan wisatawan setiap tahunnya untuk mengagumi keindahan arsitektur, seni, dan artefak bersejarahnya.</br>
+
+<br>Secara keseluruhan, sejarah Vatican mencerminkan perjalanan panjang dari sebuah pemukiman kecil Romawi menjadi pusat spiritual dan kultural global. Dengan warisan sejarahnya yang kaya, kekayaan seni dan budayanya, serta peranannya sebagai simbol universal bagi umat Katolik, Vatican City tetap menjadi salah satu destinasi paling menarik dan bersejarah di dunia.</br></p></div>
+    </div>
+    <div id="footer_blog">
+      <a href="https://github.com/imfunniee" target="_blank">made on earth by a human</a>
+    </div>
+    <script type="text/javascript">
+      setTimeout(function() {
+        document.getElementById("loading").classList.add("animated");
+        document.getElementById("loading").classList.add("fadeOut");
+        setTimeout(function() {
+          document.getElementById("loading").classList.remove("animated");
+          document.getElementById("loading").classList.remove("fadeOut");
+          document.getElementById("loading").style.display = "none";
+        }, 800);
+      }, 1500);
+      $.getJSON("../../config.json", function(user) {
+        var icon = document.createElement("link");
+        icon.setAttribute("rel", "icon");
+        icon.setAttribute("href", user[0].userimg);
+        icon.setAttribute("type", "image/png");
+        document.getElementsByTagName("head")[0].appendChild(icon);
+        document.getElementById(
+          "profile_img_blog"
+        ).style.background = `url('${user[0].userimg}') center center`;
+        document.getElementById(
+          "username_blog"
+        ).innerHTML = `<span style="display:${
+          user[0].name == null || !user[0].name ? "none" : "block"
+        };">${user[0].name}</span>@${user[0].username}<b id="blog_time"></b>`;
+
+        if ((user[0].theme = "dark.css")) {
+          document.querySelector("#background_overlay").style.background =
+            "linear-gradient(0deg, rgba(10, 10, 10, 1), rgba(10, 10, 10, 0.1))";
+        } else {
+          document.querySelector("#background_overlay").style.background =
+            "linear-gradient(0deg, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0.1))";
+        }
+      });
+    </script>
+  
+
+</body></html>

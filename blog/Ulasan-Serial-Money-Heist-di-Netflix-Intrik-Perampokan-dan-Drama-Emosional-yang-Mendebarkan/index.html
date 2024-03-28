@@ -1,0 +1,81 @@
+<!DOCTYPE html><html lang="en"><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Ulasan Serial "Money Heist" di Netflix: Intrik Perampokan dan Drama Emosional yang Mendebarkan</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="../../index.css"></head>
+  <body>
+    <div id="loading">
+      <div id="spinner"></div>
+    </div>
+    <a href="/" class="go_back"><i class="fas fa-arrow-left"></i></a>
+    <div id="background_overlay"></div>
+    <div id="background" style="background: url(top_image.jpeg) center;"></div>
+    <table id="profile_blog">
+      <tbody>
+        <tr>
+          <td style="width:8vw;"><div id="profile_img_blog"></div></td>
+          <td style="width:52vw;">
+            <div id="username_blog"></div>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    <div id="blog-display">
+      <h1 id="blog_title">Ulasan Serial "Money Heist" di Netflix: Intrik Perampokan dan Drama Emosional yang Mendebarkan</h1>
+      <h2 id="blog_sub_title">#series</h2>
+      <div id="blog"><p id="para_0_original"><br>"Money Heist" atau "La Casa de Papel" adalah salah satu serial asal Spanyol yang telah mencuri perhatian penonton di seluruh dunia sejak pertama kali ditayangkan di Netflix. Dengan kombinasi antara aksi yang mendebarkan, intrik perampokan yang rumit, dan karakter-karakter yang kompleks, "Money Heist" berhasil menggabungkan berbagai elemen cerita untuk menciptakan sebuah drama televisi yang memikat dan menegangkan.</br>
+
+<br>Plot utama "Money Heist" berkisar pada perampokan yang direncanakan dengan detail yang sangat teliti terhadap Markas Bank Spanyol oleh sekelompok orang yang dipimpin oleh karakter misterius yang dikenal sebagai "The Professor". Selain dari aksi perampokan yang mendebarkan, serial ini juga menampilkan flashback yang mendalam ke kehidupan pribadi masing-masing karakter, memberikan lapisan emosional dan kompleksitas pada cerita. Ini membuat penonton tidak hanya terfokus pada aspek perampokan tetapi juga terlibat emosional dengan perjuangan dan konflik internal dari setiap karakter.</br>
+
+<br>Karakter-karakter dalam "Money Heist" merupakan salah satu kekuatan utama dari serial ini. Dari "The Professor" yang cerdas dan dingin, Tokyo yang pemberani dan impulsif, hingga Nairobi yang kuat dan empatik, setiap karakter memiliki kepribadian dan latar belakang cerita yang kaya. Performa akting yang kuat dari para pemain membantu menghidupkan karakter-karakter ini, menjadikan mereka lebih dari sekedar perampok tetapi individu dengan motivasi, emosi, dan konflik yang kompleks.</br>
+
+<br>Selain dari aspek cerita dan karakter, "Money Heist" juga berhasil menciptakan atmosfer yang tegang dan mendebarkan melalui penggunaan musik, sinematografi, dan pengaturan adegan yang cerdas. Setiap episode dirancang dengan baik untuk meningkatkan ketegangan dan ketertarikan penonton, dengan cliffhanger yang sering kali membuat penonton tidak sabar untuk menonton episode selanjutnya.</br>
+
+<br>Namun, seperti kebanyakan serial televisi, "Money Heist" juga memiliki beberapa kelemahan. Beberapa adegan mungkin terasa terlalu panjang atau berulang, dan beberapa plot twist mungkin terasa terlalu dipaksakan atau tidak realistis. Namun, keseluruhan kualitas dan hiburan yang ditawarkan oleh "Money Heist" lebih dari cukup untuk mengatasi kelemahan-kelemahan tersebut.</br>
+
+<br>Secara keseluruhan, "Money Heist" adalah serial yang mendebarkan, emosional, dan penuh intrik, dengan plot yang rumit, karakter yang mendalam, dan aksi yang mendebarkan. Meskipun memiliki beberapa kelemahan, keseluruhan kualitas dan hiburan yang ditawarkan oleh "Money Heist" menjadikannya salah satu serial terbaik yang pernah ada di Netflix. Bagi mereka yang menyukai drama kriminal dengan lapisan emosional dan cerita yang penuh teka-teki, "Money Heist" adalah pilihan yang sempurna untuk ditonton.</br></p></div>
+    </div>
+    <div id="footer_blog">
+      <a href="https://github.com/imfunniee" target="_blank">Copyright Gitfolio</a>
+    </div>
+    <script type="text/javascript">
+      setTimeout(function() {
+        document.getElementById("loading").classList.add("animated");
+        document.getElementById("loading").classList.add("fadeOut");
+        setTimeout(function() {
+          document.getElementById("loading").classList.remove("animated");
+          document.getElementById("loading").classList.remove("fadeOut");
+          document.getElementById("loading").style.display = "none";
+        }, 800);
+      }, 1500);
+      $.getJSON("../../config.json", function(user) {
+        var icon = document.createElement("link");
+        icon.setAttribute("rel", "icon");
+        icon.setAttribute("href", user[0].userimg);
+        icon.setAttribute("type", "image/png");
+        document.getElementsByTagName("head")[0].appendChild(icon);
+        document.getElementById(
+          "profile_img_blog"
+        ).style.background = `url('${user[0].userimg}') center center`;
+        document.getElementById(
+          "username_blog"
+        ).innerHTML = `<span style="display:${
+          user[0].name == null || !user[0].name ? "none" : "block"
+        };">${user[0].name}</span>@${user[0].username}<b id="blog_time"></b>`;
+
+        if ((user[0].theme = "dark.css")) {
+          document.querySelector("#background_overlay").style.background =
+            "linear-gradient(0deg, rgba(10, 10, 10, 1), rgba(10, 10, 10, 0.1))";
+        } else {
+          document.querySelector("#background_overlay").style.background =
+            "linear-gradient(0deg, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0.1))";
+        }
+      });
+    </script>
+  
+
+</body></html>

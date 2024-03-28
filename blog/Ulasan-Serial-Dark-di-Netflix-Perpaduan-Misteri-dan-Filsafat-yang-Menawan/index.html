@@ -1,0 +1,81 @@
+<!DOCTYPE html><html lang="en"><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Ulasan Serial "Dark" di Netflix: Perpaduan Misteri dan Filsafat yang Menawan</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="../../index.css"></head>
+  <body>
+    <div id="loading">
+      <div id="spinner"></div>
+    </div>
+    <a href="/" class="go_back"><i class="fas fa-arrow-left"></i></a>
+    <div id="background_overlay"></div>
+    <div id="background" style="background: url(top_image.jpeg) center;"></div>
+    <table id="profile_blog">
+      <tbody>
+        <tr>
+          <td style="width:8vw;"><div id="profile_img_blog"></div></td>
+          <td style="width:52vw;">
+            <div id="username_blog"></div>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    <div id="blog-display">
+      <h1 id="blog_title">Ulasan Serial "Dark" di Netflix: Perpaduan Misteri dan Filsafat yang Menawan</h1>
+      <h2 id="blog_sub_title">#series</h2>
+      <div id="blog"><p id="para_0_original"><br>"Dark," serial Jerman yang ditayangkan di Netflix, telah menjadi salah satu fenomena televisi terbesar dalam beberapa tahun terakhir. Dengan plot yang kompleks, karakter yang mendalam, dan tema-tema filsafat yang memikat, "Dark" berhasil memikat jutaan penonton di seluruh dunia.</br>
+
+<br>Salah satu aspek yang paling menonjol dari "Dark" adalah narasi yang rumit dan penuh teka-teki. Serial ini mengisahkan tentang kejadian misterius yang terjadi di kota fiksi Winden, di mana hilangnya seorang anak memulai serangkaian peristiwa yang mengungkap rahasia kelam dan hubungan antarwaktu. Dengan perpaduan elemen fiksi ilmiah dan misteri, "Dark" berhasil menciptakan alur cerita yang penuh dengan kejutan dan ketegangan, memaksa penonton untuk terus mempertanyakan apa yang sebenarnya terjadi.</br>
+
+<br>Selain plot yang menarik, karakter-karakter dalam "Dark" juga dirancang dengan sangat baik. Setiap karakter memiliki latar belakang dan motivasi yang kompleks, yang memungkinkan penonton untuk merasa terhubung dengan mereka meskipun mereka sering kali berada dalam situasi yang sulit dan membingungkan. Performa akting yang brilian dari para pemain juga berhasil menghidupkan karakter-karakter ini, menjadikan mereka lebih dari sekedar karakter fiksi tetapi individu dengan emosi dan konflik internal yang nyata.</br>
+
+<br>Tema-tema filsafat juga menjadi salah satu kekuatan utama dari "Dark." Serial ini mengeksplorasi konsep seperti takdir versus kebebasan, waktu, dan identitas diri dengan cara yang mendalam dan kompleks. Melalui dialog-dialog yang cerdas dan alur cerita yang rumit, "Dark" mengajak penonton untuk berpikir lebih dalam tentang konsep-konsep ini dan bagaimana mereka mempengaruhi kehidupan dan tindakan karakter dalam serial ini.</br>
+
+<br>Namun, meskipun "Dark" adalah serial yang brilian dan mendalam, ia juga memiliki beberapa kelemahan. Alur cerita yang kompleks dan penuh teka-teki bisa menjadi sulit untuk diikuti, terutama bagi penonton yang tidak terbiasa dengan genre fiksi ilmiah atau misteri. Selain itu, beberapa orang mungkin merasa bahwa serial ini terlalu gelap atau berat, dengan sedikit momen yang ringan atau optimis.</br>
+
+<br>Secara keseluruhan, "Dark" adalah serial yang luar biasa dan memikat, dengan plot yang kompleks, karakter yang mendalam, dan tema-tema filsafat yang memikat. Meskipun memiliki beberapa kelemahan, keseluruhan kualitas dan kedalaman dari "Dark" membuatnya menjadi salah satu serial terbaik yang pernah ada. Bagi mereka yang menyukai misteri, fiksi ilmiah, dan serial dengan lapisan berbagai makna, "Dark" adalah pilihan yang sempurna untuk ditonton di Netflix.</br></p></div>
+    </div>
+    <div id="footer_blog">
+      <a href="https://github.com/imfunniee" target="_blank">Copyright Gitfolio</a>
+    </div>
+    <script type="text/javascript">
+      setTimeout(function() {
+        document.getElementById("loading").classList.add("animated");
+        document.getElementById("loading").classList.add("fadeOut");
+        setTimeout(function() {
+          document.getElementById("loading").classList.remove("animated");
+          document.getElementById("loading").classList.remove("fadeOut");
+          document.getElementById("loading").style.display = "none";
+        }, 800);
+      }, 1500);
+      $.getJSON("../../config.json", function(user) {
+        var icon = document.createElement("link");
+        icon.setAttribute("rel", "icon");
+        icon.setAttribute("href", user[0].userimg);
+        icon.setAttribute("type", "image/png");
+        document.getElementsByTagName("head")[0].appendChild(icon);
+        document.getElementById(
+          "profile_img_blog"
+        ).style.background = `url('${user[0].userimg}') center center`;
+        document.getElementById(
+          "username_blog"
+        ).innerHTML = `<span style="display:${
+          user[0].name == null || !user[0].name ? "none" : "block"
+        };">${user[0].name}</span>@${user[0].username}<b id="blog_time"></b>`;
+
+        if ((user[0].theme = "dark.css")) {
+          document.querySelector("#background_overlay").style.background =
+            "linear-gradient(0deg, rgba(10, 10, 10, 1), rgba(10, 10, 10, 0.1))";
+        } else {
+          document.querySelector("#background_overlay").style.background =
+            "linear-gradient(0deg, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0.1))";
+        }
+      });
+    </script>
+  
+
+</body></html>
